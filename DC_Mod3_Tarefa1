@@ -1,0 +1,596 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vB3p1ZvbD8iQ"
+      },
+      "source": [
+        "### 01 - Teste de gravidez\n",
+        "Escreva uma célula com controle de fluxos que tem como premissa a existência das seguintes variáveis:\n",
+        "\n",
+        "- ```sexo``` como ```str``` indicando os valores '**M**' para masculino e '**F**' para feminino  \n",
+        "- ```beta_hcg``` que indica a quantidade do beta-HCG no sangue em mUI/mL.\n",
+        "\n",
+        "A sua tarefa é escrever um código que imprima como resultado \"indivíduo do sexo masculino\" quando sexo = 'M', caso sexo = 'F', se o valor de beta-HCG for maior que 5, retorne \"Positivo\" indicando que a paciente está grávida, e retorne \"Negativo\" caso contrário.\n",
+        "\n",
+        "Não mexa nos valores da variável ```sexo``` nem em ```beta_hcg```, e escreva um código que funcione para quaisquer valores possíveis de ambos: ```sexo``` = '**M**' ou '**F**' e ```beta_hcg``` assumindo valores inteiros positivos."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VRGL4imAD8iZ",
+        "outputId": "2b8a4079-e645-4a98-f879-44704072ef95"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "individuo do sexo masculino\n"
+          ]
+        }
+      ],
+      "source": [
+        "sexo = 'M'\n",
+        "beta_hcg = 0\n",
+        "\n",
+        "if sexo == 'M':\n",
+        "    print('individuo do sexo masculino')\n",
+        "elif (sexo == 'F') & (beta_hcg > 5):\n",
+        "    print('Positivo')\n",
+        "else:\n",
+        "    print('Negativo')\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hna-UAD1D8ic"
+      },
+      "source": [
+        "### 02 - Renomeando variáveis\n",
+        "\n",
+        "Vamos ver adiante que uma forma de renomear variáveis de um conjunto de dados é através de dicionários - o dicionário deve conter como chave o nome original, associando a cada chave um único valor (tipo *str*) que contenha o nome novo.\n",
+        "\n",
+        "A sua tarefa é escrever um dicionário que possa ser utilizado para traduzir as variáveis ```name``` (nome), ```age``` (idade) e ```income``` (renda). Ou seja, esse dicionário deve relacionar as chaves *name, age* e *income* às suas respectivas traduções."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pirkjYqsD8id",
+        "outputId": "ce7fbae6-976e-4d72-f902-0e202fd14927"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'name': 'nome', 'age': 'idade', 'income': 'renda'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ],
+      "source": [
+        "dic_renomeacao = {'name': 'nome', 'age': 'idade', 'income': 'renda'}\n",
+        "dic_renomeacao"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZqLiNhkgD8if"
+      },
+      "source": [
+        "### 03 - É divisível?\n",
+        "A sua tarefa é escrever um código que indique se um número ```N``` é divisível por um número P. Escreva um programa que faça essa verificação para quaisquer combinações de ```N``` e ```M``` e devolva uma mensagem indicativa no output."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7CrC-v7ID8ig",
+        "outputId": "a6a7728b-e009-484d-cbb0-54749589c973"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "N é divisível por M\n"
+          ]
+        }
+      ],
+      "source": [
+        "N = 42\n",
+        "M = 7\n",
+        "\n",
+        "if N%M == 0 :\n",
+        "  print('N é divisível por M')\n",
+        "else:\n",
+        "    print('N não é divisível por M')\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "C37_WEg9D8ii"
+      },
+      "source": [
+        "### 04 - Números primos\n",
+        "> Um número **N** é primo se e somente se é divisível por 1, -1, por **N** e por -**N**.  \n",
+        "\n",
+        "Escreva um script que verifica se ```N``` é um número primo, verificando se ```N``` é divisível por todos os números de ```1``` a ```N-1```. Você vai precisar usar alguma ferramenta de *loop* que você aprendeu para isto. No final, devolva uma mensagem no output indicando se o número é primo ou não."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zLu87-X5D8im",
+        "outputId": "6b726c05-ba0b-4717-f12d-24b48c5c4559"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "N é um número primo\n"
+          ]
+        }
+      ],
+      "source": [
+        "N = 47\n",
+        "\n",
+        "for i in range(2, N-1, 1):\n",
+        "    if N%i == 0:\n",
+        "      print('N não é um número primo')\n",
+        "      break\n",
+        "else:\n",
+        "  print('N é um número primo')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZdURyUCyD8in"
+      },
+      "source": [
+        "### 05 - Desafio\n",
+        "O algorítmo do exercício anterior não é o mais eficiente. O que você pode fazer para deixá-lo mais eficiente? Ou seja, executar menos comparações, portanto consumir menos tempo.\n",
+        "1. Será que precisamos correr o loop até o final sempre?\n",
+        "2. Será que precisamos mesmo verificar **todos** os números?\n",
+        "3. Será que precisamos ir até N-1?\n",
+        "\n",
+        "Essas perguntas levam ao tipo de pensamento voltado a deixar um algoritmo mais eficiente. Veja se você consegue melhorar o seu."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WSmtveBLD8ip",
+        "outputId": "54b0531c-7320-46cb-99e9-716e9846db7f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "N não é um número primo\n"
+          ]
+        }
+      ],
+      "source": [
+        "N = 98\n",
+        "\n",
+        "for i in range(2, 9, 1):\n",
+        "    if N%i == 0:\n",
+        "      print('N não é um número primo')\n",
+        "      break\n",
+        "else:\n",
+        "  print('N é um número primo')\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ULZbwVbaD8iq"
+      },
+      "source": [
+        "### 06 - Peso ideal 1\n",
+        "O IMC (índice de massa corpórea) é um indicador de saúde mais bem aceito que o peso. Ele é calculado como:\n",
+        "\n",
+        "$$ IMC = \\dfrac{peso}{altura^2}$$\n",
+        "\n",
+        "Segundo a OMS, valores *normais* são entre 18.5 e 24.9.\n",
+        "\n",
+        "Sua tarefa é encontrar o ponto médio dessa faixa."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "VwX8ZGveD8ir",
+        "outputId": "6f1bc3e5-d495-48b9-c75d-7da7852f0884",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "21.7"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ],
+      "source": [
+        "imc_ideal = 24.9 - (24.9 - 18.5)/2\n",
+        "imc_ideal"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EPKXomouD8ir"
+      },
+      "source": [
+        "### 07 - Peso ideal 2\n",
+        "Recebendo um valor de altura, encontre o peso '*ideal*' dessa pessoa, que fornece o IMC encontrado acima"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "id": "0wRydUUgD8is",
+        "outputId": "88d9be02-7a69-4baa-f8a5-1e3255f3c9a8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "62.71"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ],
+      "source": [
+        "altura = 1.70\n",
+        "\n",
+        "peso_ideal = round(imc_ideal*(altura*altura),2)\n",
+        "peso_ideal"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mmtJLRQZD8it"
+      },
+      "source": [
+        "### 08 - Peso ideal 3\n",
+        "Dada uma lista contendo as alturas de pacientes, crie uma nova lista que contenha o peso '*ideal*' (que fornece o IMC calculado em **Peso ideal 1**) desses pacientes."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "id": "IsiBJFsSD8it",
+        "outputId": "ac52851b-a358-450c-8826-ca8863399f16",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[82.51, 91.19, 62.71, 59.08]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ],
+      "source": [
+        "# Resposta após correcao\n",
+        "\n",
+        "lista_alturas = [1.95, 2.05, 1.70, 1.65]\n",
+        "\n",
+        "lista_peso_ideal = []\n",
+        "\n",
+        "for alturas in lista_alturas:\n",
+        "  lista_peso_ideal.append(round(imc_ideal*(alturas*alturas),2))\n",
+        "\n",
+        "lista_peso_ideal\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "T2OZLTRaD8iu"
+      },
+      "source": [
+        "### 09 - Peso ideal 4\n",
+        "Dada uma lista de tuplas - cada elemento da lista é uma tupla contendo altura e peso de um paciente - crie uma nova lista com o IMC desses pacientes."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "N6c3qO2fD8iu",
+        "outputId": "ba2dc183-d747-4b86-d90a-9eb7999d0a0d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[27.78, 27.55, 19.19]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Primeira resposta\n",
+        "altura_peso = [(1.80, 90), (1.65, 75), (1.91, 70)]\n",
+        "\n",
+        "imc = []\n",
+        "\n",
+        "for altura, peso in altura_peso:\n",
+        "  resultado = round(peso/(altura*altura),2)\n",
+        "  imc.append(resultado)\n",
+        "\n",
+        "print(imc)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Resposta após correcao\n",
+        "\n",
+        "altura_peso = [(1.80, 90), (1.65, 75), (1.91, 70)]\n",
+        "\n",
+        "imc2 = []\n",
+        "\n",
+        "for elem in altura_peso:\n",
+        "  imc2.append(elem[1]/elem[0]**2)\n",
+        "\n",
+        "imc2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Oi4e347vYVrX",
+        "outputId": "b6f000ff-daf6-4d2b-d112-395d14c68cbf"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[27.777777777777775, 27.548209366391188, 19.188070502453332]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 44
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Resposta após correcao, tentaiva de arredondar o resultado\n",
+        "\n",
+        "altura_peso = [(1.80, 90), (1.65, 75), (1.91, 70)]\n",
+        "\n",
+        "imc2 = []\n",
+        "\n",
+        "for elem in altura_peso:\n",
+        "  imc2.append(round(elem[1]/elem[0]**2),2)\n",
+        "\n",
+        "imc2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 236
+        },
+        "id": "yg4FPcA4kaQ4",
+        "outputId": "a580963b-32ac-4eb9-e94a-b939d3f9f94e"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-45-b565b4101e20>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0;32mfor\u001b[0m \u001b[0melem\u001b[0m \u001b[0;32min\u001b[0m \u001b[0maltura_peso\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m   \u001b[0mimc2\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mround\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0melem\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m/\u001b[0m\u001b[0melem\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m**\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      9\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     10\u001b[0m \u001b[0mimc2\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: append() takes exactly one argument (2 given)"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MVNFy4GPD8iv"
+      },
+      "source": [
+        "### 10 - Peso ideal 5\n",
+        "Dada uma lista de **listas** - cada elemento da lista é uma **lista** contendo altura e peso de um paciente, adicione mais um elemento à lista de cada paciente contendo o IMC do paciente. Verifique também se é 'baixo', 'normal' ou 'alto' segundo os padrões da OMS em que normal é entre 18.5 e 24.9.\n",
+        "\n",
+        "Reflexão: por que no problema anterior temos que criar uma nova lista, e não podemos adicionar os dados de cada indivíduo à tupla?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 39,
+      "metadata": {
+        "id": "LEv3Ys02D8iv",
+        "outputId": "b9f6a2cc-683f-4b22-c632-eccf22e492e5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "27.78\n",
+            "alto\n",
+            "27.55\n",
+            "alto\n",
+            "19.19\n",
+            "normal\n",
+            "[[1.8, 90, 27.78, 'alto'], [1.65, 75, 27.55, 'alto'], [1.91, 70, 19.19, 'normal']]\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Primeira resposta\n",
+        "\n",
+        "altura_peso = [[1.80, 90], [1.65, 75], [1.91, 70]]\n",
+        "\n",
+        "for altura, peso in altura_peso:\n",
+        "  imc = round(peso/(altura*altura),2)\n",
+        "  print(imc)\n",
+        "  if imc< 18.5:\n",
+        "    print(\"baixo\") \n",
+        "  elif imc> 24.9:\n",
+        "    print(\"alto\") \n",
+        "  else:\n",
+        "    print(\"normal\")\n",
+        "\n",
+        "altura_peso[0] = [1.80, 90, 27.78, \"alto\"]\n",
+        "altura_peso[1] = [1.65, 75, 27.55, \"alto\"]\n",
+        "altura_peso[2] = [1.91, 70, 19.19, \"normal\"]\n",
+        "\n",
+        "print(altura_peso)\n",
+        "\n",
+        "#Minha conclusao apos da reflexao proposta pelo exercicio e que tuplas sao imutaveis por isso nao podemos altera-las."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Resposta após correcao\n",
+        "\n",
+        "altura_peso = [[1.80, 90], [1.65, 75], [1.91, 70]]\n",
+        "\n",
+        "lista_imc = []\n",
+        "\n",
+        "for altura, peso in altura_peso:\n",
+        "  imc = round(peso/(altura*altura),2)\n",
+        "  if imc< 18.5:\n",
+        "    status = 'baixo' \n",
+        "  elif imc> 24.9:\n",
+        "    status = 'alto' \n",
+        "  else:\n",
+        "    status = 'normal'\n",
+        "  lista_imc.append(imc)\n",
+        "  lista_imc.append(status)\n",
+        "\n",
+        "lista_imc\n",
+        "\n",
+        "altura_peso[0] = [1.80, 90, lista_imc[0], lista_imc[1]]\n",
+        "altura_peso[1] = [1.65, 75, lista_imc[3], lista_imc[3]]\n",
+        "altura_peso[2] = [1.91, 70, lista_imc[4], lista_imc[5]]\n",
+        "\n",
+        "altura_peso"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mlStBkkUcKQM",
+        "outputId": "695eda1b-99d0-4d6d-f2f0-ef5ba4be0863"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[[1.8, 90, 27.78, 'alto'],\n",
+              " [1.65, 75, 'alto', 'alto'],\n",
+              " [1.91, 70, 19.19, 'normal']]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8.5"
+    },
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": []
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
